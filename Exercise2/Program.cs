@@ -57,8 +57,7 @@ namespace Exercise2
                     
                     if (word != "")  // Check if word is blank
                     {
-                        Console.WriteLine($"Det tredje ordet i meningen är {word}.");
-                        Console.WriteLine();    
+                        Console.WriteLine($"Det tredje ordet i meningen är {word}.\n");
                         foundWord = true;
                     }
                     else NoValidInput(); //Print to Console 
@@ -111,7 +110,7 @@ namespace Exercise2
         }
         private static void Company()
         {
-            Console.WriteLine("Hur många är ni i ert sällskap?");
+            Console.Write("Hur många är ni i ert sällskap? ");
             string input = Console.ReadLine();
 
             int personsInCompany = TestForInt(input);
@@ -123,8 +122,7 @@ namespace Exercise2
                 {
                     sum += LookupPrice(YouthOrOlder()); 
                 }
-                Console.WriteLine($"Totalkostnad {sum:C0} för {personsInCompany} personer.");
-                Console.WriteLine();
+                Console.WriteLine($"Totalkostnad {sum:C0} för {personsInCompany} personer.\n");
             }
         }
 
@@ -137,7 +135,7 @@ namespace Exercise2
         }
         public static void NoValidInput()
         {
-            Console.Write("Ogiltig inmatning\n");
+            Console.WriteLine("Ogiltig inmatning\n");
         }
 
         public static bool TestForString(string str)
@@ -167,7 +165,7 @@ namespace Exercise2
 
         public static Price YouthOrOlder()
         {
-            Console.WriteLine("Ange ålder");
+            Console.Write("Ange ålder: ");
             string input = Console.ReadLine();
 
             int age = TestForInt(input);
@@ -191,7 +189,7 @@ namespace Exercise2
             switch (p)
             {
                 case Price.Free:
-                    Console.WriteLine("Gratis");
+                    Console.WriteLine("Gratis\n");
                     break;
                 case Price.Youth:
                     Console.WriteLine($"Ungdomspris: {LookupPrice(p):C0}\n");
@@ -200,7 +198,7 @@ namespace Exercise2
                     Console.WriteLine($"Standardpris: {LookupPrice(p):C0}\n");
                     break;
                 case Price.Senior:
-                    Console.Write($"Pensionärspris: {LookupPrice(p):C0}\n");
+                    Console.WriteLine($"Pensionärspris: {LookupPrice(p):C0}\n");
                     break;
                 default:
                     break;
