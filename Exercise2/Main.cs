@@ -49,6 +49,7 @@ namespace Exercise2
 
             } while (!quit);
         }
+ 
         private void ThirdWord()
         {
 
@@ -74,6 +75,7 @@ namespace Exercise2
                 else Util.NoValidInput(ui);
             }
         }
+ 
         private void InputTimesX()
         {
 
@@ -88,6 +90,7 @@ namespace Exercise2
             WriteTimesX(text, numberOfInputs);
 
         }
+
         private void WriteTimesX(string[] text, int size)
         {
             for (int i = 0; i < size; i++)
@@ -99,6 +102,7 @@ namespace Exercise2
             ui.Write("\n\n");
 
         }
+
         private void Company()
         {
                                     
@@ -111,6 +115,7 @@ namespace Exercise2
             ui.WriteLine($"Totalkostnad {sum:C0} för {personsInCompany} personer.\n");
             
         }
+
         private enum Price
         {
             Free = 0,
@@ -119,6 +124,7 @@ namespace Exercise2
             Senior = 90,
             NotDefined = -1,
         }
+
         private Price YouthOrOlder()
         {
             bool success = false;
@@ -141,10 +147,12 @@ namespace Exercise2
             }
             return price;
         }
+
         private int GetPrice(Price p)
         {
             return Convert.ToInt16(p);
         }
+
         private void PrintTicket(Price p)
         {
             switch (p)
@@ -167,6 +175,7 @@ namespace Exercise2
                     break;
             }
         }
+
         private void WriteMenu() 
         {
             foreach (var item in menuList.GetMenuItems())
@@ -174,6 +183,7 @@ namespace Exercise2
                 ui.WriteLine(item.ToString());
             }
         }
+
         private void NewMenu()
         {
 
