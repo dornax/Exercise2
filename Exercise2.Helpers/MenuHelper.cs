@@ -9,12 +9,10 @@ namespace Exercise2.Helpers
 {
     public class MenuHelpers
     {
-        
         public const string Quit = "0";
         public const string YouthOrOlder = "1";
         public const string Company = "2";
-        public const string InputTimes10 = "3";
+        public const string InputTimesX = "3";
         public const string ThirdWord = "4";
-
     }
 }
